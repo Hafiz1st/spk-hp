@@ -7,6 +7,7 @@ const LoginPage = {
     ${HeaderElement.render({ title: 'Login' })}
     <main>
     <h1>Sistem Pendukung Keputusan ( SPK ) Pemilihan Handphone Terbaik dengan Metode SAW berbasis Web Javascript</h1>
+    <h2>Metode Simple Additive Weighting</h2>
     Fishburn (1967) dan MacCrimmon (1968). Metode Simple Additive Weighting (SAW) sering juga dikenal istilah metode penjumlahan terbobot. Konsep dasar metode SAW adalah mencari penjumlahan terbobot dari rating kinerja pada setiap alternatif pada semua atribut.
 
 Metode SAW membutuhkan proses normalisasi matriks keputusan (X) ke suatu skala yang dapat diperbandingkan dengan semua rating alternatif yang ada.
