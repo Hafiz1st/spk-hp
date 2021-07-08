@@ -12,7 +12,7 @@ const getAlternatifData = (alternatif) => {
         C${index + 1}
         <h1>${element}</h1>
         </div>
-        <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+    <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
     `;
   });
   return template;
@@ -45,11 +45,24 @@ const AlternatifPage = {
         </div>
         <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
         ${alternatifData}
+        <button class='delete'>
+        <span class='material-icons'>
+        delete
+        </span>
+        </button>
         </div>
         <br>
       `;
     });
     main.innerHTML = template;
+
+    document.querySelectorAll('button.delete')
+      .forEach((element, index) => {
+        element.addEventListener('click', () => {
+          DATA.deleteAlternatif(index);
+          this.afterRender();
+        });
+      });
   },
 };
 

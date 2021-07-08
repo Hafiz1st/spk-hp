@@ -9,6 +9,12 @@ const DATA = {
   tambahAlternatif(alternatif) {
     this.alternatif.push(alternatif);
   },
+  deleteKategori(index) {
+    this.kategori.splice(index, 1);
+  },
+  deleteAlternatif(index) {
+    this.alternatif.splice(index, 1);
+  },
   kategori: [
     {
       nama: 'RAM',

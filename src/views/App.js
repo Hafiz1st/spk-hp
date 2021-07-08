@@ -5,9 +5,11 @@ import LaporanPage from './pages/LaporanPage';
 import LoginPage from './pages/LoginPage';
 import TambahAlternatifPage from './pages/TambahAlternatifPage';
 import TambahKategoriPage from './pages/TambahKategoriPage';
+import WelcomePage from './pages/WelcomePage';
 
 const ROUTES = {
   '/': LoginPage,
+  welcome: WelcomePage,
   kategori: KategoriPage,
   tambahkategori: TambahKategoriPage,
   alternatif: AlternatifPage,

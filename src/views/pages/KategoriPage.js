@@ -23,6 +23,7 @@ const KategoriPage = {
     let template = '';
     DATA.kategori.forEach((kategori) => {
       template += `
+        <div class='flex space-around'>
         <div class='flex'>
         <div class='flex-column'>
         Kriteria
@@ -34,10 +35,24 @@ const KategoriPage = {
         <h1>${kategori.bobot}</h1>
         </div>
         </div>
+        <button class='delete'>
+        <span class='material-icons'>
+        delete
+        </span>
+        </button>
+        </div>
         <br>
       `;
     });
     main.innerHTML = template;
+
+    document.querySelectorAll('button.delete')
+      .forEach((element, index) => {
+        element.addEventListener('click', () => {
+          DATA.deleteKategori(index);
+          this.afterRender();
+        });
+      });
   },
 };
 
